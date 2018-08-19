@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Code Challenge</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Demo project">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="code-challenge-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Reference Number</th>
+          <th @click="sort('borrower_country')">Borrower Country</th>
+          <th>Description</th>
+          <th @click="sort('contract_signing_date')">Contract Signed</th>
+          <th @click="sort('major_sector')">Sector</th>
+          <th @click="sort('procurement_category')">Procurement Category</th>
+          <th @click="sort('procurement_method')">Procurement Method</th>
+          <th @click="sort('procurement_type')">Procurement Type</th>
+          <th>Product Line</th>
+          <th>Project ID</th>
+          <th>Project Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="object in sortedObjects">
+          <td>{{object.borrower_contract_reference_number}}</td>
+          <td>{{object.borrower_country}}</td>
+          <td>{{object.contract_description}}</td>
+          <td>{{object.contract_signing_date}}</td>
+          <td>{{object.major_sector}}</td>
+          <td>{{object.procurement_category}}</td>
+          <td>{{object.procurement_method}}</td>
+          <td>{{object.procurement_type}}</td>
+          <td>{{object.product_line}}</td>
+          <td>{{object.project_id}}</td>
+          <td>{{object.project_name}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <button @click="prevPage">Previous</button>
+      <button @click="nextPage">Next</button>
+    </p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="main.js"></script>
+</body>
+</html>
