@@ -14,32 +14,22 @@
     <table>
       <thead>
         <tr>
-          <th>Reference Number</th>
+          <th @click="sort('project_name')">Project Name</th>
+          <th @click="sort('supplier_contract_amount_usd')">Cost (USD)</th>
           <th @click="sort('borrower_country')">Borrower Country</th>
-          <th>Description</th>
-          <th @click="sort('contract_signing_date')">Contract Signed</th>
           <th @click="sort('major_sector')">Sector</th>
           <th @click="sort('procurement_category')">Procurement Category</th>
           <th @click="sort('procurement_method')">Procurement Method</th>
-          <th @click="sort('procurement_type')">Procurement Type</th>
-          <th>Product Line</th>
-          <th>Project ID</th>
-          <th>Project Name</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="object in sortedObjects" @click="showDetail(object)">
-          <td>{{object.borrower_contract_reference_number}}</td>
+          <td>{{object.project_name}}</td>
+          <td>{{object.supplier_contract_amount_usd}}</td>
           <td>{{object.borrower_country}}</td>
-          <td>{{object.contract_description}}</td>
-          <td>{{object.contract_signing_date}}</td>
           <td>{{object.major_sector}}</td>
           <td>{{object.procurement_category}}</td>
           <td>{{object.procurement_method}}</td>
-          <td>{{object.procurement_type}}</td>
-          <td>{{object.product_line}}</td>
-          <td>{{object.project_id}}</td>
-          <td>{{object.project_name}}</td>
         </tr>
       </tbody>
     </table>
@@ -47,8 +37,9 @@
       <button @click="prevPage"><  PREVIOUS</button>
       <button @click="nextPage">NEXT  ></button>
     </div>
-    <div class="detail-container" v-if="details">
-      <p v-for="key in details">{{key}}</p>
+    <div class="detail-container">
+      <h2>TRANSACTION DETAILS</h2>
+      <p v-if="details" v-for="(key, value) in details"> {{value}}: {{key}}</p>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
