@@ -1,5 +1,5 @@
 const app = new Vue({
-  el: '#code-challenge-table',
+  el: '.code-challenge-table',
   data: {
     objects: [],
     currentSort: 'borrower_country',

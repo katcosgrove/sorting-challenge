@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="code-challenge-table">
+  <div class="code-challenge-table">
     <table>
       <thead>
         <tr>
@@ -43,10 +43,10 @@
         </tr>
       </tbody>
     </table>
-    <p>
-      <button @click="prevPage">Previous</button>
-      <button @click="nextPage">Next</button>
-    </p>
+    <div class="nav-buttons">
+      <button @click="prevPage"><  PREVIOUS</button>
+      <button @click="nextPage">NEXT  ></button>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="main.js"></script>
