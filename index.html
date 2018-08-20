@@ -28,7 +28,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="object in sortedObjects">
+        <tr v-for="object in sortedObjects" @click="showDetail(object)">
           <td>{{object.borrower_contract_reference_number}}</td>
           <td>{{object.borrower_country}}</td>
           <td>{{object.contract_description}}</td>
@@ -46,6 +46,9 @@
     <div class="nav-buttons">
       <button @click="prevPage"><  PREVIOUS</button>
       <button @click="nextPage">NEXT  ></button>
+    </div>
+    <div class="detail-container" v-if="details">
+      <p v-for="key in details">{{key}}</p>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>

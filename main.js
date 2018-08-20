@@ -2,6 +2,7 @@ const app = new Vue({
   el: '.code-challenge-table',
   data: {
     objects: [],
+    details: null,
     currentSort: 'borrower_country',
     currentSortDir: 'asc',
     pageSize: 10,
@@ -17,16 +18,19 @@ const app = new Vue({
   },
 
   methods: {
-    sort:  function(sort) {
+    showDetail: function(element) {
+      this.details = element;
+    },
+    sort: function(sort) {
       if(sort === this.currentSort) {
         this.currentSortDir = this.currentSortDir==='asc' ? 'desc' : 'asc';
       }
       this.currentSort = sort;
     },
-    nextPage:function() {
-      if((this.currentPage*this.pageSize) < this.objects.length) this.currentPage++;
+    nextPage: function() {
+      if((this.currentPage * this.pageSize) < this.objects.length) this.currentPage++;
     },
-    prevPage:function() {
+    prevPage: function() {
       if(this.currentPage > 1) this.currentPage--;
     },
   },
