@@ -5,13 +5,16 @@
 .nav-buttons {
   position: absolute;
   margin-top: .25vw;
-  left: 38vw;
+  left: 33vw;
 }
 
 .detail-container {
+  position: absolute;
+  left: 25vw;
   font-family: 'Arial';
   text-align: center;
   width: 35vw;
+  z-index: -1;
 }
 
 .detail-container h2 {
