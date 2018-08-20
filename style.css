@@ -1,0 +1,74 @@
+.code-challenge-table {
+  overflow: scroll;
+}
+
+.nav-buttons {
+  position: absolute;
+  margin-top: .25vw;
+  left: 33vw;
+}
+
+.detail-container {
+  position: absolute;
+  left: 25vw;
+  font-family: 'Arial';
+  text-align: center;
+  width: 35vw;
+  z-index: -1;
+}
+
+.detail-container h2 {
+  margin-top: 3vw;
+  padding: .75vw .25vw;
+  color: white;
+  background-color: rgb(25, 183, 33);
+  text-align: center;
+}
+
+.detail-container p {
+  margin: .25vw 0;
+}
+
+button {
+  font-size: 1vw;
+  border: none;
+  background-color: rgb(165, 165, 165);
+  width: 8vw;
+  padding: .5vw 0;
+  transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(25, 183, 33);
+  transition: all 0.4s ease-in-out;
+}
+
+table {
+  font-family: 'Arial';
+  font-size: .75vw;
+  text-transform: uppercase;
+}
+
+th {
+  font-size: 1.15vw;
+  padding: .75vw .25vw;
+  background: rgb(25, 183, 33);
+  color: white;
+  border: 1px solid white;
+  }
+
+tr {
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+tr:hover {
+  background-color: rgb(237, 237, 237);
+  transition: all 0.4s ease-in-out;
+}
+
+td {
+  border: 1px solid rgb(237, 237, 237);
+  padding: .7vw .5vw;
+  color: rgb(68, 68, 68);
+}
